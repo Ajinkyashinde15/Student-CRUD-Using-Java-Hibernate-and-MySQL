@@ -43,3 +43,19 @@ Following Screenshots are describe classes have been created to mapping hibernat
 # Student Model Java Class:
 
 ![picture alt](https://github.com/Ajinkyashinde15/Student-CRUD-Using-Java-Hibernate-and-MySQL/blob/master/Student%20class.png "Student Model Java Class")
+
+
+# StudentDetails Model Java Class:
+
+![picture alt](https://github.com/Ajinkyashinde15/Student-CRUD-Using-Java-Hibernate-and-MySQL/blob/master/StudentDetails%20class.png "StudentDetails Model Java Class")
+
+
+# Controller Java Class:
+
+![picture alt](https://github.com/Ajinkyashinde15/Student-CRUD-Using-Java-Hibernate-and-MySQL/blob/master/StudentController.png "Student Controller Java Class")
+
+
+# hibernate.cfg.xml:
+
+![picture alt](https://github.com/Ajinkyashinde15/Student-CRUD-Using-Java-Hibernate-and-MySQL/blob/master/hibernate.cfg.png "hibernate.cfg.xml")
+
