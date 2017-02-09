@@ -42,4 +42,4 @@ Following Screenshots are describe classes have been created to mapping hibernat
 
 # Student Model Java Class:
 
-Markup : ![picture alt](https://github.com/Ajinkyashinde15/Student-CRUD-Using-Java-Hibernate-and-MySQL/blob/master/Student%20class.png "Student Model Java Class")
+![picture alt](https://github.com/Ajinkyashinde15/Student-CRUD-Using-Java-Hibernate-and-MySQL/blob/master/Student%20class.png "Student Model Java Class")
