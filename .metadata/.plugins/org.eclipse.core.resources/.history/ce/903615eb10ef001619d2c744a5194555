@@ -1,0 +1,24 @@
+package com.ajinkya;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import java.text.Annotation;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.annotations.Entity;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+
+@Entity
+@Table(name="StudentDetails")
+public class StudentDetails 
+{
+	@Id
+	
+}

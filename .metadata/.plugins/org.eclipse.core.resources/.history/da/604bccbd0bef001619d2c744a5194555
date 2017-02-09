@@ -1,0 +1,97 @@
+package com.ajinkya;
+
+import java.text.Annotation;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+
+public class ControllerStudent {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		new ControllerStudent().AddRecords();
+		//new ControllerStudent().DeleteRecord(1);
+		
+		Student s = new Student();
+		s.setName("aju");		
+		s.setName("aju");
+		s.setMarks(31);
+		s.setSchool("UCD");
+		s.setYear(2003);
+
+		new ControllerStudent().UpdateRecord();
+
+	}
+	
+	void DeleteRecord(int sid) 
+	{
+		Transaction trns = null;
+		SessionFactory sessionFac = new org.hibernate.cfg.AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessionFac.openSession();
+
+		try 
+		{
+			trns = session.beginTransaction();
+			Student s = (Student) session.load(Student.class, new Integer(sid));
+			session.delete(s);
+			session.getTransaction().commit();
+			System.out.println("Deleted successfully..!!");
+		} catch (RuntimeException e) {
+			if (trns != null) {
+				trns.rollback();
+			}
+			e.printStackTrace();
+		} finally {
+			session.flush();
+			session.close();
+		}
+	}
+
+	void UpdateRecord(int sid) 
+	{
+		Transaction trns = null;
+		SessionFactory sessionFac = new org.hibernate.cfg.AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessionFac.openSession();
+
+		try 
+		{
+			trns = session.beginTransaction();
+			Student s = (Student) session.load(Student.class, new Integer(sid));
+			session.delete(s);
+			session.getTransaction().commit();
+			System.out.println("Updated successfully..!!");
+		} catch (RuntimeException e) {
+			if (trns != null) {
+				trns.rollback();
+			}
+			e.printStackTrace();
+		} finally {
+			session.flush();
+			session.close();
+		}
+	}
+
+	void AddRecords() {
+		Student s = new Student();
+		s.setName("aju");
+		s.setMarks(31);
+		s.setSchool("UCD");
+		s.setYear(2003);
+
+		SessionFactory sessionFac = new org.hibernate.cfg.AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessionFac.openSession();
+		session.beginTransaction();
+
+		session.save(s);
+
+		session.getTransaction().commit();
+		session.close();
+		sessionFac.close();
+
+	}
+
+}

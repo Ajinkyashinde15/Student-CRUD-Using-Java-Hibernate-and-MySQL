@@ -1,0 +1,12 @@
+package com.ajinkya;
+
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Entity;
+
+@Entity
+@Table(name="")
+public class StudentDetails 
+{
+
+}
